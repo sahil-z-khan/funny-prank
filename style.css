@@ -15,8 +15,9 @@ body, html {
 }
 
 .message {
-    font-size: 2rem; /* Default size */
-    animation: fadeIn 5s infinite;
+    max-width: 100%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
+    animation: fadeIn 2s infinite;
 }
 
 /* Animation */
@@ -25,15 +26,15 @@ body, html {
     50% { opacity: 1; }
 }
 
-/* Responsiveness: Adjustments for smaller screens */
+/* Adjustments for smaller screens */
 @media (max-width: 768px) {
     .message {
-        font-size: 1.5rem; /* Smaller font for smaller screens */
+        max-width: 75%; /* Smaller image for smaller screens */
     }
 }
 
 @media (max-width: 375px) { /* Common iPhone screen width */
     .message {
-        font-size: 1.2rem; /* Even smaller font for very small screens */
+        max-width: 50%; /* Even smaller image for very small screens */
     }
 }
