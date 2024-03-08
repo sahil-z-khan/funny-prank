@@ -11,15 +11,29 @@ body, html {
 
 .container {
     text-align: center;
+    padding: 20px;
 }
 
 .message {
-    font-size: 2rem;
-    animation: fadeIn 2s infinite;
+    font-size: 2rem; /* Default size */
+    animation: fadeIn 5s infinite;
 }
 
 /* Animation */
 @keyframes fadeIn {
     0%, 100% { opacity: 0; }
     50% { opacity: 1; }
+}
+
+/* Responsiveness: Adjustments for smaller screens */
+@media (max-width: 768px) {
+    .message {
+        font-size: 1.5rem; /* Smaller font for smaller screens */
+    }
+}
+
+@media (max-width: 375px) { /* Common iPhone screen width */
+    .message {
+        font-size: 1.2rem; /* Even smaller font for very small screens */
+    }
 }
